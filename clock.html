@@ -34,7 +34,9 @@
       flex-grow: 1;
       margin: 0 5px; /* 調整水平間距 */
     }
-
+	.header input::placeholder {
+	  color: #800080; /* 設定字體顏色為亮紫色 */
+	}
     .header input {
       background-color: rgba(255, 255, 255, 0.5);
       padding: 10px;
@@ -44,10 +46,13 @@
       font-size: 16px;
       text-align: center;
       width: calc((100% - 70px - 20px) / 2); /* 畫面寬度減去按鈕寬度和間距，再平均分配給兩個 input */
+      font-weight: bold; /* 將字體設定為粗體 */
+      color: #800080; /* 設定字體顏色為亮紫色 */
+      box-shadow: 0 0 10px rgba(128, 0, 128, 0.5); /* 添加陰影效果 */
     }
 
     .login-button {
-      background-color: #4CAF50;
+      background-color: #800080; /* 將按鈕背景色改為 #800080 */
       color: white;
       padding: 10px 0; /* 固定高度為40px，上下各5px的內邊距 */
       width: 70px; /* 固定寬度為70px */
@@ -55,6 +60,9 @@
       border-radius: 10px;
       cursor: pointer;
       font-size: 16px;
+      font-weight: bold; /* 將字體設定為粗體 */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 添加文字陰影效果 */
+      box-shadow: 0 0 10px rgba(128, 0, 128, 0.5); /* 添加陰影效果 */
     }
   </style>
 
@@ -62,8 +70,8 @@
 </head>
 <body>
   <div class="header">
-    <input type="text" id="username" name="username" placeholder="選手">
-    <input type="password" id="password" name="password" placeholder="ID">
+    <input type="text" id="username" name="username" placeholder="PLAYER_ID">
+    <input type="password" id="password" name="password" placeholder="GAME_CODE">
     <button class="login-button">GO</button>
   </div>
 </body>
