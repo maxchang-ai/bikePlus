@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('pic/background.gif');
+      background-size: cover;
+      background-position: 50% 50%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .header {
+      width: 80%; /* 調整寬度 */
+      max-width: 600px; /* 設定最大寬度 */
+      margin: 20px auto; /* 上下 20px，左右自動居中 */
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .header input {
+      flex: 1;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+      text-align: center; /* 文字置中 */
+      margin-right: 10px;
+    }
+
+    .login-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+  <title>打卡+</title>
+</head>
+<body>
+  <div class="header">
+    <input type="text" id="username" name="username" placeholder="選手">
+    <input type="password" id="password" name="password" placeholder="ID">
+    <button class="login-button">GO</button>
+  </div>
+</body>
+</html>
