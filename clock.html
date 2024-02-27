@@ -10,7 +10,7 @@
       background-image: url('https://raw.githubusercontent.com/maxchang-ai/bikePlus/main/pic/background.gif');
       background-size: cover;
       background-position: 50% 50%;
-      background-repeat: no-repeat; /* 不重複 */
+      background-repeat: no-repeat;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -29,7 +29,7 @@
     }
 
     .header input {
-      flex: 1;
+      flex: 2; /* 調整寬度比例，這裡是 2:1:1 的比例 */
       background-color: rgba(255, 255, 255, 0.5);
       padding: 10px;
       border: 1px solid #ccc;
@@ -38,9 +38,11 @@
       font-size: 16px;
       text-align: center;
       margin-right: 10px;
+      margin-bottom: 10px;
     }
 
     .login-button {
+      flex: 1;
       background-color: #4CAF50;
       color: white;
       padding: 10px 20px;
@@ -48,8 +50,22 @@
       border-radius: 10px;
       cursor: pointer;
       font-size: 16px;
+      margin-right: 10px;
+      margin-bottom: 10px;
     }
   </style>
+
+  <!-- 添加媒體查詢 -->
+  <style>
+    @media screen and (max-width: 600px) {
+      .header input,
+      .login-button {
+        width: 100%; /* 讓 input 和 button 佔據整個寬度 */
+        margin-right: 0; /* 移除水平間距 */
+      }
+    }
+  </style>
+
   <title>打卡+</title>
 </head>
 <body>
