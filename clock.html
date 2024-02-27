@@ -7,7 +7,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-image: url('https://raw.githubusercontent.com/maxchang-ai/bikePlus/main/pic/background.gif');
+      background-image: url('pic/background.gif');
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
@@ -70,9 +70,21 @@
 </head>
 <body>
   <div class="header">
-    <input type="text" id="username" name="username" placeholder="PLAYER_ID">
-    <input type="password" id="password" name="password" placeholder="GAME_CODE">
+    <input type="text" id="username" name="username" placeholder="PLAYER_ID" onfocus="clearDefaultText(this)" onblur="restoreDefaultText(this)">
+    <input type="password" id="password" name="password" placeholder="GAME_CODE" onfocus="clearDefaultText(this)" onblur="restoreDefaultText(this)">
     <button class="login-button">GO</button>
   </div>
+  
+  <script>
+    function clearDefaultText(input) {
+      input.placeholder = "";
+    }
+
+    function restoreDefaultText(input) {
+      if (input.value === "") {
+        input.placeholder = (input.id === "username") ? "PLAYER_ID" : "GAME_CODE";
+      }
+    }
+  </script>
 </body>
 </html>
